@@ -9,12 +9,12 @@ kind of problem: one will never fix itself, so the program exits with instructio
 temporary, so it says to wait and hands you back the prompt with your conversation intact.
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+uv venv
+uv pip install -r requirements.txt
 cp .env.example .env          # then paste your real key
 
-python main.py
-python tests.py               # 38 tests, no API key needed
+uv run python main.py
+uv run python tests.py        # 38 tests, no API key needed
 ```
 
 ## Also in this repo
